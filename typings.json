@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "js-yaml": "github:DefinitelyTyped/DefinitelyTyped/js-yaml/index.d.ts#a5f4d50cccf025b6a8088093e76da2b20c1220f3",
+    "lodash": "registry:npm/lodash#4.0.0+20161015015725"
+  }
+}
