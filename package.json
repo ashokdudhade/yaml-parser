@@ -17,16 +17,17 @@
     "lodash": "^4.17.4"
   },
   "devDependencies": {
-    "ts-node": "^2.1.0",
-    "tslint": "^4.4.2",
     "chai": "^3.5.0",
-    "mocha": "^3.2.0",
-    "istanbul": "^0.3.19",
     "coveralls": "^2.11.4",
-    "mocha-lcov-reporter": "^0.0.2",
     "gulp": "^3.9.1",
     "gulp-sourcemaps": "^2.4.1",
     "gulp-tslint": "^7.1.0",
-    "gulp-typescript": "^3.1.4"
+    "gulp-typescript": "^3.1.4",
+    "istanbul": "^0.3.19",
+    "mocha": "^3.2.0",
+    "mocha-lcov-reporter": "^0.0.2",
+    "ts-node": "^2.1.0",
+    "tslint": "^4.4.2",
+    "typescript": "^2.1.6"
   }
 }
