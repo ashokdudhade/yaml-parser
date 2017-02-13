@@ -4,26 +4,26 @@ import fs = require("fs");
 import * as _ from "lodash";
 import * as yaml from "js-yaml";
 
-class YamlParser {
+export class YamlParser {
 
     constructor() {
 
     }
 
-    public lint(path: string) {
-
+    public lint(options: any) {
+        let path = options.path;
         if (!fs.existsSync(path)) {
             throw new Error("Path: '" + path + "' does not exists.");
         }
 
         if (fs.lstatSync(path).isDirectory()) {
-            return this.fetchYamlFileNames(path);
+            return this.fetchYamlFileNames(options);
         }
 
         return [];
     }
 
-    private getFileNames(dir, filePaths = []) {
+    private getFileNames(dir, filePaths = [], isDirRecursiveParse = true) {
 
         let files = fs.readdirSync(dir);
 
@@ -33,7 +33,7 @@ class YamlParser {
 
             if (stat.isSymbolicLink()) {
                 return [];
-            } else if (stat.isDirectory()) {
+            } else if (stat.isDirectory() && isDirRecursiveParse) {
                 this.getFileNames(path, filePaths);
             }
             let rePattern = new RegExp(/\.ya?ml$/);
@@ -48,10 +48,10 @@ class YamlParser {
 
     }
 
-    private fetchYamlFileNames(dirName) {
+    private fetchYamlFileNames(options) {
 
         let processedFiles = [];
-        let files = this.getFileNames(dirName);
+        let files = this.getFileNames(options.path, undefined, options.isDirRecursiveParse);
         _.forEach(files, (item) => {
 
 
