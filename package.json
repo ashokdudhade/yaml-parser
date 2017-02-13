@@ -4,7 +4,7 @@
   "description": "Yaml parser utility to lint and compare yaml cofigurations",
   "main": "index.js",
   "scripts": {
-    "test": "mocha",
+    "test": "gulp build; mocha;",
     "clean": "gulp clean"
   },
   "author": "Ashok Dudhade",
