@@ -1,14 +1,14 @@
 {
   "name": "yaml-parser",
   "version": "1.0.0",
-  "description": "",
+  "description": "Yaml parser utility to lint and compare yaml cofigurations",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha",
     "clean": "gulp clean"
   },
   "author": "Ashok Dudhade",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "@types/js-yaml": "^3.5.29",
     "@types/lodash": "^4.14.52",
