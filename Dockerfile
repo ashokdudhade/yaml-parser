@@ -7,6 +7,7 @@ RUN npm install -g tsd
 RUN npm install -g ts-node
 RUN npm install -g gulp-cli
 RUN npm install -g tsd 
+RUN npm install -g typings
 RUN npm install -g gulp
 RUN npm install -g istanbul
 
